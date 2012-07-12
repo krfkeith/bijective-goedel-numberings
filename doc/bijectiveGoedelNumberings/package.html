@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>bijectiveGoedelNumberings</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../lib/template.css" />
+      <script type="text/javascript" src="../lib/jquery.js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+      <div id="definition">
+        <img src="../lib/package_big.png" />
+        
+        <h1>bijectiveGoedelNumberings</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bijectiveGoedelNumberings</span>
+      </span>
+      </h4>
+      
+      <div class="fullcommenttop" id="comment"></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="bijectiveGoedelNumberings.Cantor" data-isabs="true">
+      <a id="Cantor:Cantor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Cantor.html"><span class="name">Cantor</span></a><span class="result"> extends Catalan</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Implements fast algorithms for the bijection between natural numbers and
+tuples of natural numbers using a generalization of Cantor's pairing bijection -
+along the lines of</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan" data-isabs="true">
+      <a id="Catalan:Catalan"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Catalan.html"><span class="name">Catalan</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">ranks and unranks balanced parenthesis strings
+following algorithm form &quot;Combinatorial Algorithms: .</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.F" data-isabs="false">
+      <a id="F:F"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="F.html"><span class="name">F</span></a><span class="params">(<span name="f">f: BigInt</span>, <span name="ts">ts: List[Term]</span>)</span><span class="result"> extends Term with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function terms labeled by a natural number f
+and containing a sequence of subterms ts
+</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.Term" data-isabs="true">
+      <a id="Term:Term"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Term.html"><span class="name">Term</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Implements bijective Goedel numberings
+(ranking/unranking algorithms) for a term
+algebra with an infinite supply of
+function symbols and variables represented
+as the Term data type</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.TermEncoder" data-isabs="true">
+      <a id="TermEncoder:TermEncoder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TermEncoder.html"><span class="name">TermEncoder</span></a><span class="result"> extends Catalan with Cantor</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the encoding/decoding algorithms
+from Terms in a term algebra to natural
+numbers (represented as BigInt objects).</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.V" data-isabs="false">
+      <a id="V:V"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="V.html"><span class="name">V</span></a><span class="params">(<span name="i">i: BigInt</span>)</span><span class="result"> extends Term with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Variables labeled with natural numbers
+</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="bijectiveGoedelNumberings.CantorTester" data-isabs="false">
+      <a id="CantorTester:CantorTester"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CantorTester$.html"><span class="name">CantorTester</span></a><span class="result"> extends Cantor</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Contains methods testing
+the generalized Cantor bijection
+between N and N^k
+</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.Main" data-isabs="false">
+      <a id="Main:Main"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Main$.html"><span class="name">Main</span></a><span class="result"> extends App</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Main entry point to this package:
+runs the tests from TermTester
+</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.TermTester" data-isabs="false">
+      <a id="TermTester:TermTester"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TermTester$.html"><span class="name">TermTester</span></a><span class="result"> extends TermEncoder</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Contains testing functions trying
+out independently the two sides of the
+bijection between terms and natural numbers.</p>
+    </li></ol>
+            </div>
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

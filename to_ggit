@@ -1,0 +1,15 @@
+tar -cf goedel.tar doc src/bijectiveGoedelNumberings gcompile grun to_ggit to_gdoc READMEgoedel.txt
+mv *.tar ../../git/bijective-goedel-numberings
+pushd .
+cd ../../git/bijective-goedel-numberings
+rm -r -f src doc src gcompile grun to_ggit to_gdoc *.txt
+tar xvf goedel.tar
+rm -f goedel.tar
+# remove any existing files from the repo, skipping over ones not in repo
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+# specify a global exclusion list
+git config --global core.excludesfile ~/.gitignore
+# adding .DS_Store to that list
+#echo .DS_Store >> ~/.gitignore
+popd
+

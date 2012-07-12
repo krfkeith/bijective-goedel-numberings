@@ -1,0 +1,3 @@
+rm -r -f bin
+mkdir bin
+scalac -classpath src -explaintypes -deprecation -unchecked -d bin  src/bijectiveGoedelNumberings/*.scala

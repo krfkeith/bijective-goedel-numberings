@@ -1,0 +1,3 @@
+rm -r -f doc
+mkdir doc
+scaladoc -unchecked -d doc -doc-title "Bijective Goedel Numberings for Term Algebras" src/bijectiveGoedelNumberings/*.scala
