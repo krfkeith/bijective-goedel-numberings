@@ -1,6 +1,6 @@
 A Scala package providing bijective Goedel numberings (ranking/unranking bijections to N) for members of a Term Algebra with an infinite supply of variables and functions symbols.
 
-The algorithms, using a generalized Cantor bijection between N and N^k (the only one known to be polynomial in size of the representations) ensure that:
+The algorithms, using a generalized Cantor bijection between N and N^k (known to be polynomial in size of the representations) ensure that:
 
 - a unique syntactically valid term is associated to each natural number
 
