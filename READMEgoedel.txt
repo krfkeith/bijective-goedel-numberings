@@ -37,3 +37,9 @@ Enjoy,
 
 Paul Tarau
 http://www.cse.unt.edu/~tarau/
+
+CHANGES:
+
+The file FixedSignatureTerm.scala has been added. It contains algorithms for
+encoding terms algebras of fixed signature. Main.scala has been updated 
+with additional tests for these encodings.
