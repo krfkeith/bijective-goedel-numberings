@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>bijectiveGoedelNumberings.Catalan</title>
+          <title>bijectiveGoedelNumberings.FixedSignatureTerm</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../lib/template.css" />
@@ -16,27 +16,37 @@
       <div id="definition">
         <img src="../lib/trait_big.png" />
         <p id="owner"><a name="bijectiveGoedelNumberings" class="extype" href="package.html">bijectiveGoedelNumberings</a></p>
-        <h1>Catalan</h1>
+        <h1>FixedSignatureTerm</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Catalan</span><span class="result"> extends AnyRef</span>
+        <span class="name">FixedSignatureTerm</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>ranks and unranks balanced parenthesis strings
-following algorithm form &quot;Combinatorial Algorithms: ...&quot;
-by Kreher and Stinson</p><p>it provides as public methods:</p><p>binomial, rank, unrank, and showpars</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Bijective Goedel numberings (ranking / unranking functions)
+for Term Algebras with a finite signature and a finite number
+of variables. Models things like circuits made
+of a fixed library of gates and a fixed number of input
+wires.</p><p>While the bitsize of the natural numbers associated
+to some terms might exceed the bitsize of the term
+representation, terms associated to a small numbers
+a guaranteed to be also small.</p><p>These algorithms are likely to be useful for
+random generation of terms - of use in circuit
+synthesis or genetic programming - but they are
+unlikely to be useful as a practical serialization
+mechanism.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a>, <a name="bijectiveGoedelNumberings.CantorTester" class="extype" href="CantorTester$.html">CantorTester</a>, <a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a>, <a name="bijectiveGoedelNumberings.FTermTester" class="extype" href="FTermTester$.html">FTermTester</a>, <a name="bijectiveGoedelNumberings.TermEncoder" class="extype" href="TermEncoder.html">TermEncoder</a>, <a name="bijectiveGoedelNumberings.TermTester" class="extype" href="TermTester$.html">TermTester</a></div>
+          <div class="subClasses hiddenContent"><a name="bijectiveGoedelNumberings.FConst" class="extype" href="FConst.html">FConst</a>, <a name="bijectiveGoedelNumberings.FFun" class="extype" href="FFun.html">FFun</a>, <a name="bijectiveGoedelNumberings.FVar" class="extype" href="FVar.html">FVar</a></div>
         </div></div>
     
 
@@ -50,7 +60,7 @@ by Kreher and Stinson</p><p>it provides as public methods:</p><p>binomial, rank,
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="bijectiveGoedelNumberings.Catalan" class="in"><span>Catalan</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="bijectiveGoedelNumberings.FixedSignatureTerm" class="in"><span>FixedSignatureTerm</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -140,19 +150,6 @@ by Kreher and Stinson</p><p>it provides as public methods:</p><p>binomial, rank,
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#binomial" data-isabs="false">
-      <a id="binomial(BigInt,BigInt):BigInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">binomial</span><span class="params">(<span name="n">n: BigInt</span>, <span name="r0">r0: BigInt</span>)</span><span class="result">: BigInt</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Computes the binomial &quot;n choose k&quot;
-</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -279,32 +276,6 @@ by Kreher and Stinson</p><p>it provides as public methods:</p><p>binomial, rank,
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#rank" data-isabs="false">
-      <a id="rank(List[Int]):BigInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rank</span><span class="params">(<span name="xs">xs: List[<span name="scala.Int" class="extype">Int</span>]</span>)</span><span class="result">: BigInt</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Computes natural number uniquely associated
-to given balanced parentehsis string xs
-</p>
-    </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#showpars" data-isabs="false">
-      <a id="showpars(List[Int]):String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">showpars</span><span class="params">(<span name="xs">xs: List[<span name="scala.Int" class="extype">Int</span>]</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -329,20 +300,6 @@ to given balanced parentehsis string xs
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#unrank" data-isabs="false">
-      <a id="unrank(BigInt):List[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unrank</span><span class="params">(<span name="r">r: BigInt</span>)</span><span class="result">: List[<span name="scala.Int" class="extype">Int</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Computes balanced parenthesis expression uniquely
-associated to natural number r
-</p>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

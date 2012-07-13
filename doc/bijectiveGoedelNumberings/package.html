@@ -89,6 +89,75 @@ following algorithm form &quot;Combinatorial Algorithms: .</p>
       <p class="comment cmt">Function terms labeled by a natural number f
 and containing a sequence of subterms ts
 </p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FConst" data-isabs="false">
+      <a id="FConst:FConst[A, B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FConst.html"><span class="name">FConst</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="b">b: B</span>)</span><span class="result"> extends FixedSignatureTerm[A, B] with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Constant symbols of polymorphic type B - usually given as
+a finite list.</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FFun" data-isabs="false">
+      <a id="FFun:FFun[A, B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FFun.html"><span class="name">FFun</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: B</span>, <span name="xs">xs: List[FixedSignatureTerm[A, B]]</span>)</span><span class="result"> extends FixedSignatureTerm[A, B] with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function symbols of polymorphic type B - usually given
+as a finite list (together with their arities).</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums" data-isabs="false">
+      <a id="FGoedelNums:FGoedelNums[A, B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FGoedelNums.html"><span class="name">FGoedelNums</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends Catalan with Cantor</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Algorithms computing a bijection between Natural Numbers
+represented as BigInts and terms taken from an algebra
+with finite signature - parameterized by the type of
+the variables (A) and the type of the function+constant
+symbols (B).</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FVar" data-isabs="false">
+      <a id="FVar:FVar[A, B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FVar.html"><span class="name">FVar</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: A</span>)</span><span class="result"> extends FixedSignatureTerm[A, B] with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Variables of polymorphic type A - usually given
+as a finite list.</p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FixedSignatureTerm" data-isabs="true">
+      <a id="FixedSignatureTerm:FixedSignatureTerm[A, B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FixedSignatureTerm.html"><span class="name">FixedSignatureTerm</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Bijective Goedel numberings (ranking / unranking functions)
+for Term Algebras with a finite signature and a finite number
+of variables.</p>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Term" data-isabs="true">
       <a id="Term:Term"></a>
       <h4 class="signature">
@@ -154,6 +223,18 @@ numbers (represented as BigInt objects).</p>
 the generalized Cantor bijection
 between N and N^k
 </p>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FTermTester" data-isabs="false">
+      <a id="FTermTester:FTermTester"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FTermTester$.html"><span class="name">FTermTester</span></a><span class="result"> extends FGoedelNums[String, String]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Various tests for Goedel numberings of fixed signature terms.</p>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Main" data-isabs="false">
       <a id="Main:Main"></a>
       <h4 class="signature">

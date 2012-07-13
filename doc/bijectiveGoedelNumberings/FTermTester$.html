@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>bijectiveGoedelNumberings.Cantor</title>
+          <title>bijectiveGoedelNumberings.FTermTester</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../lib/template.css" />
@@ -12,41 +12,30 @@
       <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
-        <img src="../lib/trait_big.png" />
+        <img src="../lib/object_big.png" />
         <p id="owner"><a name="bijectiveGoedelNumberings" class="extype" href="package.html">bijectiveGoedelNumberings</a></p>
-        <h1>Cantor</h1>
+        <h1>FTermTester</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Cantor</span><span class="result"> extends <a name="bijectiveGoedelNumberings.Catalan" class="extype" href="Catalan.html">Catalan</a></span>
+        <span class="name">FTermTester</span><span class="result"> extends <a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a>[String, String]</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Implements fast algorithms for the bijection between natural numbers and
-tuples of natural numbers using a generalization of Cantor's pairing bijection -
-along the lines of</p><p>@INPROCEEDINGS{iclp12,
-author = {Tarau, Paul},
-title = {{Deriving a Fast Inverse of the Generalized Cantor N-tupling Bijection}},
-booktitle = {{28-th International Conference on Logic Programming -
-Technical Communications (ICLP'12)}},
-editor = {Dovier, Agostino and Costa, Vitor Santos},
-year = {2012},
-address = {Budapest, Hungary},
-month = sep
-}
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Various tests for Goedel numberings of fixed signature terms.
+Note that we instantiate the type parameter A and B
+to the specific type of function, constant and variable
+symbols and we define specific finite Arrays of each.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="bijectiveGoedelNumberings.Catalan" class="extype" href="Catalan.html">Catalan</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="bijectiveGoedelNumberings.CantorTester" class="extype" href="CantorTester$.html">CantorTester</a>, <a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a>, <a name="bijectiveGoedelNumberings.FTermTester" class="extype" href="FTermTester$.html">FTermTester</a>, <a name="bijectiveGoedelNumberings.TermEncoder" class="extype" href="TermEncoder.html">TermEncoder</a>, <a name="bijectiveGoedelNumberings.TermTester" class="extype" href="TermTester$.html">TermTester</a></div>
+          <div class="superTypes hiddenContent"><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a>[String, String], <a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a>, <a name="bijectiveGoedelNumberings.Catalan" class="extype" href="Catalan.html">Catalan</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -60,7 +49,7 @@ month = sep
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="bijectiveGoedelNumberings.Cantor" class="in"><span>Cantor</span></li><li name="bijectiveGoedelNumberings.Catalan" class="in"><span>Catalan</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="bijectiveGoedelNumberings.FTermTester" class="in"><span>FTermTester</span></li><li name="bijectiveGoedelNumberings.FGoedelNums" class="in"><span>FGoedelNums</span></li><li name="bijectiveGoedelNumberings.Cantor" class="in"><span>Cantor</span></li><li name="bijectiveGoedelNumberings.Catalan" class="in"><span>Catalan</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -203,6 +192,33 @@ month = sep
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FTermTester#fbigt" data-isabs="false">
+      <a id="fbigt(BigInt):FixedSignatureTerm[String, String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fbigt</span><span class="params">(<span name="n">n: BigInt</span>)</span><span class="result">: <a name="bijectiveGoedelNumberings.FixedSignatureTerm" class="extype" href="FixedSignatureTerm.html">FixedSignatureTerm</a>[String, String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generates a term of representation size O(n).</p><div class="fullcomment"><div class="comment cmt"><p>Generates a term of representation size O(n).
+Tests that unique natural numbers correspond to any terms.
+</p></div></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FTermTester#fbigtest" data-isabs="false">
+      <a id="fbigtest(BigInt):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fbigtest</span><span class="params">(<span name="x">x: BigInt</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests behavior on big terms
+</p>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -231,7 +247,9 @@ month = sep
       </h4>
       <p class="shortcomment cmt"> efficently finds the smallest m such that (m choose k &gt; n) using
  binary search
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p> efficently finds the smallest m such that (m choose k &gt; n) using
+ binary search
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Cantor#fromCantorTuple" data-isabs="false">
       <a id="fromCantorTuple(List[BigInt]):BigInt"></a>
       <h4 class="signature">
@@ -246,7 +264,25 @@ month = sep
       <p class="shortcomment cmt">Computes the natural number uniquely associated
 to the sequence of natural numbers ns, using
 Cantor's generalized bijection formula
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Computes the natural number uniquely associated
+to the sequence of natural numbers ns, using
+Cantor's generalized bijection formula
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FTermTester#ftest" data-isabs="false">
+      <a id="ftest(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ftest</span><span class="params">(<span name="k">k: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generates terms associated to a range of natural numbers.</p><div class="fullcomment"><div class="comment cmt"><p>Generates terms associated to a range of natural numbers.
+Tests the fact that all natural numbers correspond
+to terms.
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -259,6 +295,22 @@ Cantor's generalized bijection formula
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#get_bdigit" data-isabs="false">
+      <a id="get_bdigit(BigInt,BigInt):(BigInt, BigInt)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_bdigit</span><span class="params">(<span name="b">b: BigInt</span>, <span name="n">n: BigInt</span>)</span><span class="result">: (<span name="scala.math.BigInt" class="extype">BigInt</span>, <span name="scala.math.BigInt" class="extype">BigInt</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">extract one bijective base-b digit from
+natiral number n
+</p><div class="fullcomment"><div class="comment cmt"><p>extract one bijective base-b digit from
+natiral number n
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -283,6 +335,30 @@ Cantor's generalized bijection formula
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#lc" data-isabs="false">
+      <a id="lc:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lc</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#lf" data-isabs="false">
+      <a id="lf:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lf</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Cantor#list2set" data-isabs="false">
       <a id="list2set(List[BigInt]):List[BigInt]"></a>
       <h4 class="signature">
@@ -294,7 +370,56 @@ Cantor's generalized bijection formula
         <span class="name">list2set</span><span class="params">(<span name="xs">xs: List[BigInt]</span>)</span><span class="result">: List[BigInt]</span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#lv" data-isabs="false">
+      <a id="lv:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lv</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#lvc" data-isabs="false">
+      <a id="lvc:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lvc</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#nat2term" data-isabs="false">
+      <a id="nat2term(BigInt):FixedSignatureTerm[String, String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nat2term</span><span class="params">(<span name="n">n: BigInt</span>)</span><span class="result">: <a name="bijectiveGoedelNumberings.FixedSignatureTerm" class="extype" href="FixedSignatureTerm.html">FixedSignatureTerm</a>[String, String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Builds the unique term associated to
+natural number n, using symbols from the arrays
+&quot;consts&quot; and &quot;funs&quot; and variables from the
+array &quot;vars&quot;.</p><div class="fullcomment"><div class="comment cmt"><p>Builds the unique term associated to
+natural number n, using symbols from the arrays
+&quot;consts&quot; and &quot;funs&quot; and variables from the
+array &quot;vars&quot;.</p><p>The algorithm works by associating
+small numbers to variable and constant symbols
+and then it uses the generalized Cantor bijection
+toCantorTuple to split larger numbers into
+sequences matching the arities of the
+function symbols, from which it creates
+subterms recursively.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -331,6 +456,22 @@ Cantor's generalized bijection formula
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#put_bdigit" data-isabs="false">
+      <a id="put_bdigit(BigInt,BigInt,BigInt):BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">put_bdigit</span><span class="params">(<span name="b">b: BigInt</span>, <span name="d">d: BigInt</span>, <span name="m">m: BigInt</span>)</span><span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">integrates bijective base-b digit d into natural
+number m
+</p><div class="fullcomment"><div class="comment cmt"><p>integrates bijective base-b digit d into natural
+number m
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#rank" data-isabs="false">
       <a id="rank(List[Int]):BigInt"></a>
       <h4 class="signature">
@@ -361,7 +502,10 @@ to given balanced parentehsis string xs
       <p class="shortcomment cmt">Bijection from finite sets of natural numbers
 (canonically represented as non-decreasing sequences)
 to finite sequences of natural numbers
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Bijection from finite sets of natural numbers
+(canonically represented as non-decreasing sequences)
+to finite sequences of natural numbers
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Catalan#showpars" data-isabs="false">
       <a id="showpars(List[Int]):String"></a>
       <h4 class="signature">
@@ -386,6 +530,21 @@ to finite sequences of natural numbers
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="bijectiveGoedelNumberings.FGoedelNums#term2nat" data-isabs="false">
+      <a id="term2nat(FixedSignatureTerm[String, String]):BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">term2nat</span><span class="params">(<span name="t">t: <a name="bijectiveGoedelNumberings.FixedSignatureTerm" class="extype" href="FixedSignatureTerm.html">FixedSignatureTerm</a>[String, String]</span>)</span><span class="result">: BigInt</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the unique natural number (represented as a BigInt)
+associated to a term t.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the unique natural number (represented as a BigInt)
+associated to a term t.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Cantor#toCantorTuple" data-isabs="false">
       <a id="toCantorTuple(BigInt,BigInt):List[BigInt]"></a>
       <h4 class="signature">
@@ -402,7 +561,7 @@ to n using Cantor's generalized bijection.</p><div class="fullcomment"><div clas
 to n using Cantor's generalized bijection.</p><p>This is an effciently computed inverse of
 fromCantorTuple - the key contribution
 of Paul Tarau's iclp12 paper
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
     </li><li visbl="pub" name="bijectiveGoedelNumberings.Cantor#toCombinadics" data-isabs="false">
       <a id="toCombinadics(BigInt,BigInt):List[BigInt]"></a>
       <h4 class="signature">
@@ -416,7 +575,9 @@ of Paul Tarau's iclp12 paper
       </h4>
       <p class="shortcomment cmt">Converts n to its &quot;combinadic&quot; representation
 (see Knuth's AOCP fascicle for definitions)
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Converts n to its &quot;combinadic&quot; representation
+(see Knuth's AOCP fascicle for definitions)
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -497,7 +658,11 @@ associated to natural number r
         </div>
 
         <div id="inheritedMembers">
-        <div name="bijectiveGoedelNumberings.Catalan" class="parent">
+        <div name="bijectiveGoedelNumberings.FGoedelNums" class="parent">
+              <h3>Inherited from <a name="bijectiveGoedelNumberings.FGoedelNums" class="extype" href="FGoedelNums.html">FGoedelNums</a>[String, String]</h3>
+            </div><div name="bijectiveGoedelNumberings.Cantor" class="parent">
+              <h3>Inherited from <a name="bijectiveGoedelNumberings.Cantor" class="extype" href="Cantor.html">Cantor</a></h3>
+            </div><div name="bijectiveGoedelNumberings.Catalan" class="parent">
               <h3>Inherited from <a name="bijectiveGoedelNumberings.Catalan" class="extype" href="Catalan.html">Catalan</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>

@@ -6,8 +6,12 @@ package bijectiveGoedelNumberings
  */
 object Main extends App {
 
-  TermTester.test(3)
+  // comment out unneded test and/or add new tests here 
 
+  FTermTester.ftest(10)
+  FTermTester.fbigtest(6)
+
+  TermTester.test(3)
 }
 
 /**
@@ -76,8 +80,11 @@ object TermTester extends TermEncoder {
   /**
    * runs various tests on
    * individual and combined algorithms
+   * for Goedel numbering of terms with an infinite supply
+   * of function and variable symbols
    */
   def test(n: BigInt) {
+    println("START test")
 
     val t = bigt(n)
 
@@ -131,7 +138,65 @@ object TermTester extends TermEncoder {
     println("bt2=" + bt2)
     println("b2=" + toCode(bt2))
 
-    println("END")
+    println("DONE test\n")
   }
 
 }
+
+/**
+ * Various tests for Goedel numberings of fixed signature terms.
+ * Note that we instantiate the type parameter A and B
+ * to the specific type of function, constant and variable
+ * symbols and we define specific finite Arrays of each.
+ */
+object FTermTester extends FGoedelNums[String, String](
+  Array("x", "y", "z"), Array("0", "1"),
+  Array(("~", 1), ("*", 2), ("+", 2), ("if", 3))) {
+
+  /**
+   * Generates terms associated to a range of natural numbers.
+   * Tests the fact that all natural numbers correspond
+   * to terms.
+   */
+  def ftest(k: Int) = {
+    println("START ftest")
+    for (i <- 100 until 100 + k) {
+      val t = nat2term(i)
+      val n = term2nat(t)
+      println(i + ":n=" + t + "==" + n)
+    }
+    println("DONE ftest\n")
+  }
+
+  /**
+   * Generates a term of representation size O(n).
+   * Tests that unique natural numbers correspond to any terms.
+   */
+  def fbigt(n: BigInt): FixedSignatureTerm[String, String] = {
+    val small: FixedSignatureTerm[String, String] = FVar("x")
+    if (0 == n) small
+    else {
+      new FFun("*",
+        List(small, fbigt(n - 1)))
+    }
+  }
+
+  /**
+   * Tests behavior on big terms
+   */
+  def fbigtest(x: BigInt) {
+    println("START fbigtest")
+    val a = fbigt(x)
+    val t = term2nat(a)
+    println("bigt(" + x + ")=" + a)
+    println("t=" + t)
+    val a1 = nat2term(t)
+    println("a1=" + a1 + "=" + (a == a1))
+    if (x < 8) {
+      val n = t
+      println("n=" + n)
+    }
+    println("DONE fbigtest\n")
+  }
+}
+
