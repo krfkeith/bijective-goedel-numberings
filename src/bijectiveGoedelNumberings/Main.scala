@@ -8,8 +8,10 @@ object Main extends App {
 
   // comment out unneded test and/or add new tests here 
 
-  FTermTester.ftest(10)
-  FTermTester.fbigtest(6)
+  //CantorTester.test
+
+  FTermTester.ftest(10000, 10)
+  // FTermTester.fbigtest(6)
 
   TermTester.test(3)
 }
@@ -158,9 +160,9 @@ object FTermTester extends FGoedelNums[String, String](
    * Tests the fact that all natural numbers correspond
    * to terms.
    */
-  def ftest(k: Int) = {
+  def ftest(m: Int, k: Int) = {
     println("START ftest")
-    for (i <- 100 until 100 + k) {
+    for (i <- m until m + k) {
       val t = nat2term(i)
       val n = term2nat(t)
       println(i + ":n=" + t + "==" + n)
@@ -192,7 +194,7 @@ object FTermTester extends FGoedelNums[String, String](
     println("t=" + t)
     val a1 = nat2term(t)
     println("a1=" + a1 + "=" + (a == a1))
-    if (x < 8) {
+    if (x < 10) {
       val n = t
       println("n=" + n)
     }

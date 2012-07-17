@@ -3,14 +3,14 @@ package bijectiveGoedelNumberings
 /**
  * Bijective Goedel numberings (ranking / unranking functions)
  * for Term Algebras with a finite signature and a finite number
- * of variables. Models things like circuits made
+ * of variables. They model things like circuits made
  * of a fixed library of gates and a fixed number of input
  * wires.
  *
  * While the bitsize of the natural numbers associated
  * to some terms might exceed the bitsize of the term
  * representation, terms associated to a small numbers
- * a guaranteed to be also small.
+ * are guaranteed to be also small.
  *
  * These algorithms are likely to be useful for
  * random generation of terms - of use in circuit
@@ -99,16 +99,16 @@ class FGoedelNums[A, B](
       FConst(consts(i))
     } else { // when lvc <= n 
       val n1 = (1 + n - lvc)
-      // extracts excactly one (bijecting base lf)
+      // extracts excactly one (bijective base lf)
       // digit from n to use it as an index that
       // selects a function symbol
       val (d, m) = get_bdigit(lf, n1)
       val i = d.intValue // index in the array of functions symbols
       val (f, k) = funs(i)
-      // splits m into a list of natrual numbers ns
+      // splits m into a list of natural numbers ns
       val ns = toCantorTuple(k, m)
-      // applies the same recursively on the list ns
-      // using "map" and the builds a term based on
+      // applies the same recursively to the list ns
+      // using "map" and then builds a term based on
       // function symbol "f"
       new FFun(f, ns map nat2term)
     }
@@ -138,7 +138,7 @@ class FGoedelNums[A, B](
 
   /**
    * extract one bijective base-b digit from
-   * natiral number n
+   * natural number n
    */
   def get_bdigit(b: BigInt, n: BigInt) = {
     val (q, d) = (n / b, n % b)

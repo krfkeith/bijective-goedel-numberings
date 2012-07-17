@@ -32,6 +32,20 @@ import scala.collection.mutable._
  * provide a possibly practical serialization algorithm
  * for data types that can be seen as term algebras - including
  * XML files and object graphs
+ *
+ * 3) Term algebras can be seen as a generic syntax for well-formed
+ * expressions in languages like predicate or lambda calculus as well
+ * as a generic syntax for "proof-terms" in proof assistants like Coq.
+ * Equivalently, they can be seen as programs expressed as syntax trees.
+ * The encodings factor in the most obvious "decidable" properties
+ * of our formal language objects (through an unambiguous CF-grammar).
+ * By restricting Goedel numberings to only well formed terms
+ * and ensuring that they are bijective, "no bit is lost"
+ * through the mapping to natural numbers e.g. optimal
+ * information theoretical succinctness is achieved.
+ *
+ * Note that "well-formedness" can safely be assumed as decidable and
+ * covered by unambiguous context free grammars in today's formal languages.
  */
 sealed trait Term {
   def toSkel(s: ArrayBuffer[Int])
