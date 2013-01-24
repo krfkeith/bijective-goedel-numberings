@@ -8,12 +8,12 @@ The algorithms, using a generalized Cantor bijection between N and N^k (known to
 
 - either way, the bitsize of the representation of the output is proportional (up to a small constant) to the bitsize of the representation of the output
 
-For instance, a terms like:
+For instance, terms like:
 
 F3(v3,F2(v2,F1(v1,v0,F1),F2),F3)
 F3(v3,F2(v2,F1(v1,v0,v0),F1(v1,v0,v0)),F2(v2,F1(v1,v0,v0),F1(v1,v0,v0)))
 
-are uniquely associated to a Goedel numbers like
+are uniquely associated to Goedel numbers like
 
 1166589096937670191 and
 781830310066286008864372141041
@@ -27,7 +27,7 @@ Type "grun" to run the tests in file Main.
 
 To try out other examples edit Main.scala, recompile with "gcompile" and test with "grun".
 
-Directory "doc" contains the scaladoc generated documentation - but you will need to
+The directory "doc" contains the scaladoc generated documentation - but you will need to
 take a look at the source in directory "src" for any meaningful details on various
 algorithms.
 
@@ -42,4 +42,12 @@ CHANGES:
 
 The file FixedSignatureTerm.scala has been added. It contains algorithms for
 encoding terms algebras of fixed signature. Main.scala has been updated 
-with additional tests for these encodings.
+with additional tests for these encodings. This can be used to enumerate or
+generate randomly small circuits by using a signature representing a library
+of logic gates e.g.
+
+10001: ~(+(if(x,y,y),*(x,x)))
+10002: *(*(y,x),if(y,x,z))
+10003: +(*(y,x),if(y,x,z))
+10004: if(~(y),*(x,y),1)
+

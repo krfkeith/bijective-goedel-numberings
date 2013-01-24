@@ -46,7 +46,17 @@ generalized Cantor tupling bijection</p><p>2) in combination with a symbol table
 and heap position of variables used as labels, this can
 provide a possibly practical serialization algorithm
 for data types that can be seen as term algebras - including
-XML files and object graphs
+XML files and object graphs</p><p>3) Term algebras can be seen as a generic syntax for well-formed
+expressions in languages like predicate or lambda calculus as well
+as a generic syntax for &quot;proof-terms&quot; in proof assistants like Coq.
+Equivalently, they can be seen as programs expressed as syntax trees.
+The encodings factor in the most obvious &quot;decidable&quot; properties
+of our formal language objects (through an unambiguous CF-grammar).
+By restricting Goedel numberings to only well formed terms
+and ensuring that they are bijective, &quot;no bit is lost&quot;
+through the mapping to natural numbers e.g. optimal
+information theoretical succinctness is achieved.</p><p>Note that &quot;well-formedness&quot; can safely be assumed as decidable and
+covered by unambiguous context free grammars in today's formal languages.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
